@@ -1,11 +1,9 @@
 import { Request, Response } from "express";
-import { Usuario } from "../type/user";
+import { Usuario } from "../type/user.type";
 import  userSchema from "../schema/user.schema";
 import { db } from "../db/db";
 import { usersTable } from "../db/schema/db.schema";
 import { eq } from "drizzle-orm";
-
-const usuarios: Usuario[] = [];
 
 export async function createUser(req: Request, res: Response) {
     const valideUser = userSchema.safeParse(req.body);
