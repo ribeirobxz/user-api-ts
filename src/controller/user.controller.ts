@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { Usuario } from "../type/user";
-import  userSchema from "../schema/user";
+import  userSchema from "../schema/user.schema";
 import { db } from "../db/db";
-import { usersTable } from "../db/schema/schema";
+import { usersTable } from "../db/schema/db.schema";
 import { eq } from "drizzle-orm";
 
 const usuarios: Usuario[] = [];
