@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { Usuario } from "../type/user.type";
 import  userSchema from "../schema/user.schema";
-import { db } from "../db/db";
-import { usersTable } from "../db/schema/db.schema";
+import { db } from "../service/database.service";
+import { usersTable } from "../schema/db.schema";
 import { eq } from "drizzle-orm";
 
 export async function createUser(req: Request, res: Response) {
