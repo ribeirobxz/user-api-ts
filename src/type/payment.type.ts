@@ -1,9 +1,8 @@
-import { PaymentMethodType } from "./payment.method.type";
+
 
 export type Payment = {
     id: number;
     orderId: number;
-    paymentMethodType: PaymentMethodType;
 }
 
 export type CardPayment = Payment & {
